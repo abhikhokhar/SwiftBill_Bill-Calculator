@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing Summary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex items-center justify-center p-4">
+  <div class="bg-white bg-opacity-95 shadow-2xl rounded-lg p-6 max-w-4xl w-full">
+    <h1 
+      id="editableHeading" 
+      class="text-3xl md:text-4xl font-bold text-center text-indigo-900 mb-6" 
+      contenteditable="true" 
+      oninput="saveHeading()"
+      title="Click to edit the title"
+    >
+      Billing Summary
+    </h1>
+
+    <div class="w-full">
+      <table class="w-full border border-gray-300 divide-y divide-gray-300 rounded-lg overflow-hidden">
+        <thead class="bg-gradient-to-r from-indigo-300 to-purple-400">
+          <tr>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900 uppercase">Item Name</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900 uppercase">Price</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900 uppercase">Quantity</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900 uppercase">Total</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody" class="divide-y divide-gray-200 bg-white">
+        </tbody>
+      </table>
+    </div>
+    <div class="flex justify-between items-center border-t border-gray-300 pt-4 mt-4">
+      <span class="text-base md:text-lg font-medium text-gray-800">Grand Total:</span>
+      <span id="grandTotal" class="text-xl md:text-2xl font-extrabold text-indigo-700">₹0.00</span>
+    </div>
+    <button class="mt-6 w-full py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg shadow-md hover:from-indigo-600 hover:to-purple-700 transition duration-300">
+      Thank You for Visiting Us!
+    </button>
+  </div>
+
+
+
+  <script>
+    // Retrieve stored data from localStorage
+    const tableBody = document.querySelector("#tableBody");
+    const grandTotalElement = document.querySelector("#grandTotal");
+    const storedData = JSON.parse(localStorage.getItem("billingData")) || { items: [], total: 0 };
+
+    storedData.items.forEach((item) => {
+      const row = document.createElement("tr");
+      row.classList.add("hover:bg-gray-100");
+      row.innerHTML = `
+        <td class="px-4 py-2 text-xs md:text-sm text-gray-700">${item.name}</td>
+        <td class="px-4 py-2 text-xs md:text-sm text-gray-700">₹${item.price.toFixed(2)}</td>
+        <td class="px-4 py-2 text-xs md:text-sm text-gray-700">${item.quantity}</td>
+        <td class="px-4 py-2 text-xs md:text-sm text-gray-700">₹${(item.price * item.quantity).toFixed(2)}</td>
+      `;
+      tableBody.appendChild(row);
+    });
+
+    grandTotalElement.textContent = `₹${storedData.total.toFixed(2)}`;
+
+    
+  const editableHeading = document.querySelector("#editableHeading");
+
+  // Load saved heading from localStorage (if exists)
+  const savedHeading = localStorage.getItem("billingHeading");
+  if (savedHeading) {
+    editableHeading.textContent = savedHeading;
+  }
+
+  // Save heading to localStorage
+  function saveHeading() {
+    localStorage.setItem("billingHeading", editableHeading.textContent.trim());
+  }
+
+
+  </script>
+</body>
+</html>

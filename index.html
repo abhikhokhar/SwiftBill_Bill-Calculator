@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftBill - Effortless Billing Solution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex flex-col items-center justify-center p-4">
+
+  <!-- Header Section -->
+  <header class="mb-8 text-center">
+    <h1 class="text-5xl font-extrabold text-indigo-900 mb-4 drop-shadow-md">
+      SwiftBill
+    </h1>
+    <p class="text-lg text-gray-700">
+      The Ultimate Tool for Hassle-Free Billing Management
+    </p>
+  </header>
+
+  <!-- Responsive Container -->
+  <div class="flex flex-col lg:flex-row lg:space-x-24 space-y-8 lg:space-y-0 w-full items-center">
+
+    <!-- Add Item Form -->
+    <div class="bg-white bg-opacity-90 shadow-xl rounded-2xl p-8 w-full lg:max-w-md">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">
+        Add Items to Your Cart
+      </h2>
+      <form id="billingForm" class="space-y-6">
+        <div>
+          <label for="itemName" class="block text-lg font-semibold text-gray-800 mb-1">
+            Item Name 🛒
+          </label>
+          <input type="text" id="itemName" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., Wireless Mouse" required>
+        </div>
+        <div>
+          <label for="price" class="block text-lg font-semibold text-gray-800 mb-1">
+            Price (₹) 💰
+          </label>
+          <input type="number" id="price" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., 799" required>
+        </div>
+        <div>
+          <label for="quantity" class="block text-lg font-semibold text-gray-800 mb-1">
+            Quantity 📦
+          </label>
+          <input type="number" id="quantity" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., 2" required>
+        </div>
+        <div class="flex justify-between items-center mt-6">
+          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg shadow-lg transition duration-300">
+            + Add to Cart
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Billing Summary -->
+    <div class="bg-white bg-opacity-90 shadow-xl rounded-2xl p-8 w-full lg:max-w-2xl">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+        Your Shopping Basket 🛍️
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full divide-y divide-gray-300 border border-gray-200 rounded-lg mb-6">
+          <thead class="bg-indigo-600 text-white rounded-t-lg">
+            <tr>
+              <th class="px-6 py-3 text-left text-sm font-semibold">
+                Product Name
+              </th>
+              <th class="px-6 py-3 text-left text-sm font-semibold">
+                Price (₹)
+              </th>
+              <th class="px-6 py-3 text-left text-sm font-semibold">
+                Quantity
+              </th>
+              <th class="px-6 py-3 text-left text-sm font-semibold">
+                Subtotal (₹)
+              </th>
+            </tr>
+          </thead>
+          <tbody id="tableBody" class="divide-y divide-gray-200 bg-gray-50">
+            <!-- Items will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+      <div class="flex justify-between mt-2">
+        <button id="viewSummary" type="button" class="bg-gray-400 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg cursor-not-allowed transition duration-300" disabled>
+          View Basket
+        </button>
+        <button id="calculateBill" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg transition duration-300">
+          Finalize Bill
+        </button>
+      </div>
+      <div id="grandTotalSection" class="mt-8 hidden">
+        <h3 class="text-2xl font-bold text-gray-800 text-center">
+          Total Amount Payable 💳
+        </h3>
+        <div class="bg-gray-50 border-t border-gray-300 mt-4 p-6 rounded-lg shadow-md">
+          <p class="text-lg font-medium text-gray-700 text-center">
+            Your grand total is:
+          </p>
+          <p id="grandTotal" class="text-4xl font-extrabold text-indigo-800 text-center mt-2">
+            ₹0.00
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
