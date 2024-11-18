@@ -4,11 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftBill - Effortless Billing Solution</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="SwiftBill is the ultimate billing solution for hassle-free management. Easily track, calculate, and finalize your bills with a user-friendly interface.">
+  <meta name="keywords" content="SwiftBill, billing solution, bill management, smart billing, shopping basket, calculate bill">
+  <meta name="author" content="Abhi Khokhar - Web Developer">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="SwiftBill - Effortless Billing Solution">
+  <meta property="og:description" content="Simplify your billing process with SwiftBill. Add items, manage your shopping basket, and finalize bills easily.">
+  <meta property="og:image" content="assests/swiftbillsc.png">
+  <meta property="og:url" content="https://swiftbilling.abhikhokhar.live/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SwiftBill">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assests/favicon.png" type="image/x-icon"> 
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex flex-col items-center justify-center p-4">
 
-  <!-- Header Section -->
   <header class="mb-8 text-center">
     <h1 class="text-5xl font-extrabold text-indigo-900 mb-4 drop-shadow-md">
       SwiftBill
@@ -18,10 +35,7 @@
     </p>
   </header>
 
-  <!-- Responsive Container -->
   <div class="flex flex-col lg:flex-row lg:space-x-24 space-y-8 lg:space-y-0 w-full items-center">
-
-    <!-- Add Item Form -->
     <div class="bg-white bg-opacity-90 shadow-xl rounded-2xl p-8 w-full lg:max-w-md">
       <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">
         Add Items to Your Cart
@@ -53,7 +67,6 @@
       </form>
     </div>
 
-    <!-- Billing Summary -->
     <div class="bg-white bg-opacity-90 shadow-xl rounded-2xl p-8 w-full lg:max-w-2xl">
       <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
         Your Shopping Basket 🛍️
@@ -77,7 +90,6 @@
             </tr>
           </thead>
           <tbody id="tableBody" class="divide-y divide-gray-200 bg-gray-50">
-            <!-- Items will be dynamically added here -->
           </tbody>
         </table>
       </div>
