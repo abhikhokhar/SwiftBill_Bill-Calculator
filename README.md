@@ -1,14 +1,15 @@
 # SwiftBill_Bill-Calculator
-Project Overview
+Project Overview:
 This project is a simple web-based billing system that allows users to add items to their shopping basket, calculate the total, and view the final summary. The system takes the item name, price, and quantity as input, calculates the total for each item, and displays a summary of all items along with the grand total. The data is also stored in the browser's local storage for future reference.
 
-Features
+Features:
+
 Add items: Users can input item details (name, price, and quantity) to add them to the basket.
 Calculate total: The total for each item and the grand total is automatically calculated.
 View Summary: A summary page displays the complete list of items and the grand total.
 Local Storage: All the billing data (items and total) are saved in the browser's local storage.
 
-How to Use
+How to Use:
 1. Adding Items to Basket
 Navigate to the Billing Form section.
 Enter the item name, price, and quantity.
@@ -25,7 +26,8 @@ Once you've added all items, click the View Summary button to navigate to the ba
 The View Summary button will be activated once items are added to the basket.
 Screenshot: Summary Page
 
-Functionality
+Functionality:
+
 Billing Form: The form captures the item name, price, and quantity. When the form is submitted, the item is added to the table, and the grand total is updated automatically.
 Calculate Bill: When the Calculate Bill button is clicked, the grand total is displayed at the bottom of the page, and the data is stored in the browser's local storage.
 View Summary: The View Summary button redirects to the billing-summary.html page, where the details of the items and the total are displayed. The button is enabled after the user has added at least one item to the basket.
@@ -38,7 +40,8 @@ HTML: For the structure of the webpage.
 TailwindCSS: For styling the webpage and making it visually appealing.
 JavaScript: For handling the functionality, including form submissions, total calculations, and local storage operations.
 
-Future Improvements
+Future Improvements:
+
 Add validation to ensure that only valid data is entered (e.g., prices and quantities must be positive numbers).
 Allow users to edit or delete items from the basket.
 Improve the user interface for better user experience.
