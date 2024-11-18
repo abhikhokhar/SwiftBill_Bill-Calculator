@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftBill - Effortless Billing Solution</title>
-  
+
   <!-- Primary Meta Tags -->
-  <meta name="description" content="SwiftBill is the ultimate billing solution for hassle-free management. Easily track, calculate, and finalize your bills with a user-friendly interface.">
-  <meta name="keywords" content="SwiftBill, billing solution, bill management, smart billing, shopping basket, calculate bill">
+  <meta name="description"
+    content="SwiftBill is the ultimate billing solution for hassle-free management. Easily track, calculate, and finalize your bills with a user-friendly interface.">
+  <meta name="keywords"
+    content="SwiftBill, billing solution, bill management, smart billing, shopping basket, calculate bill">
   <meta name="author" content="Abhi Khokhar - Web Developer">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph Metadata -->
   <meta property="og:title" content="SwiftBill - Effortless Billing Solution">
-  <meta property="og:description" content="Simplify your billing process with SwiftBill. Add items, manage your shopping basket, and finalize bills easily.">
+  <meta property="og:description"
+    content="Simplify your billing process with SwiftBill. Add items, manage your shopping basket, and finalize bills easily.">
   <meta property="og:image" content="assests/swiftbillsc.png">
   <meta property="og:url" content="https://swiftbilling.abhikhokhar.live/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SwiftBill">
 
   <!-- Favicon -->
-  <link rel="icon" href="assests/favicon.png" type="image/x-icon"> 
+  <link rel="icon" href="assests/favicon.png" type="image/x-icon">
 
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex flex-col items-center justify-center p-4">
+
+<body
+  class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex flex-col items-center justify-center p-4">
 
   <header class="mb-8 text-center">
     <h1 class="text-5xl font-extrabold text-indigo-900 mb-4 drop-shadow-md">
@@ -45,22 +51,29 @@
           <label for="itemName" class="block text-lg font-semibold text-gray-800 mb-1">
             Item Name 🛒
           </label>
-          <input type="text" id="itemName" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., Wireless Mouse" required>
+          <input type="text" id="itemName"
+            class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg"
+            placeholder="e.g., Wireless Mouse" required>
         </div>
         <div>
           <label for="price" class="block text-lg font-semibold text-gray-800 mb-1">
             Price (₹) 💰
           </label>
-          <input type="number" id="price" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., 799" required>
+          <input type="number" id="price"
+            class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg"
+            placeholder="e.g., 799" required>
         </div>
         <div>
           <label for="quantity" class="block text-lg font-semibold text-gray-800 mb-1">
             Quantity 📦
           </label>
-          <input type="number" id="quantity" class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg" placeholder="e.g., 2" required>
+          <input type="number" id="quantity"
+            class="h-10 px-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-purple-500 focus:ring-purple-500 text-gray-900 text-lg"
+            placeholder="e.g., 2" required>
         </div>
         <div class="flex justify-between items-center mt-6">
-          <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg shadow-lg transition duration-300">
+          <button type="submit"
+            class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg shadow-lg transition duration-300">
             + Add to Cart
           </button>
         </div>
@@ -94,10 +107,13 @@
         </table>
       </div>
       <div class="flex justify-between mt-2">
-        <button id="viewSummary" type="button" class="bg-gray-400 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg cursor-not-allowed transition duration-300" disabled>
+        <button id="viewSummary" type="button"
+          class="bg-gray-400 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg cursor-not-allowed transition duration-300"
+          disabled>
           View Basket
         </button>
-        <button id="calculateBill" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg transition duration-300">
+        <button id="calculateBill"
+          class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg transition duration-300">
           Calculate Bill
         </button>
       </div>
@@ -117,6 +133,40 @@
     </div>
   </div>
 
+
+<div class="sm:flex sm:items-center sm:justify-center sm:space-x-24 py-4 px-6 sm:mt-8 mt-6">
+  <span class="text-sm text-gray-700 sm:text-center dark:text-gray-900">
+    © 2024 <a href="#" class="hover:underline font-semibold text-indigo-700">SwiftBill</a>. All Rights Reserved. Developed by <a href="https://abhikhokhar.live" class="hover:underline font-semibold text-indigo-700">Abhi Khokhar</a>.
+  </span>
+
+  <div class="flex mt-4 sm:justify-center sm:mt-0 space-x-6">
+    <a href="https://www.instagram.com/abhi_khokhar_23/" target="_blank"
+      class="text-gray-600 hover:text-indigo-700 dark:hover:text-indigo-600 transition duration-300">
+      <img class="w-6 h-6"
+        src="https://sdrive.blr1.cdn.digitaloceanspaces.com/files/7c55e0c6c809a94c61ffe41f0d35ff6d.png"
+        alt="Instagram">
+      <span class="sr-only">Instagram account</span>
+    </a>
+
+    <a href="https://github.com/abhikhokhar" target="_blank"
+      class="text-gray-600 hover:text-indigo-700 dark:hover:text-indigo-600 transition duration-300">
+      <img class="w-6 h-6"
+        src="https://sdrive.blr1.cdn.digitaloceanspaces.com/files/ef42ab1de87935da57c3f33f509ba13e.png" alt="GitHub">
+      <span class="sr-only">GitHub account</span>
+    </a>
+
+    <a href="https://www.linkedin.com/in/abhi-khokhar-131851284/" target="_blank"
+      class="text-gray-600 hover:text-indigo-700 dark:hover:text-indigo-600 transition duration-300">
+      <img class="w-6 h-6"
+        src="https://sdrive.blr1.cdn.digitaloceanspaces.com/files/764fdbc815443d9db0020e8237ddaa04.png"
+        alt="LinkedIn">
+      <span class="sr-only">LinkedIn account</span>
+    </a>
+  </div>
+</div>
+
+
   <script src="script.js"></script>
 </body>
+
 </html>
