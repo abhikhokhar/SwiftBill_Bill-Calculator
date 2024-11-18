@@ -6,39 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Billing Summary</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="assests/favicon.png" type="image/x-icon">
 </head>
 
-<body
-  class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-blue-200 via-purple-200 to-pink-200 min-h-screen flex items-center justify-center p-4">
   <div class="bg-white bg-opacity-95 shadow-2xl rounded-lg p-6 max-w-4xl w-full">
     <h1 id="editableHeading"
-      class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-6 hover:cursor-pointer"
+      class="text-3xl md:text-4xl font-bold text-center text-indigo-900 mb-6 hover:cursor-pointer"
       contenteditable="true" oninput="saveHeading()" title="Click to edit the title">
-      Invoice Summary
+      View Your Basket
     </h1>
     <p class="text-center text-gray-600 mb-6">
       Your complete billing details at a glance.
     </p>
 
     <div class="w-full">
-      <table class="w-full border border-gray-300 divide-y divide-gray-300 rounded-lg overflow-hidden">
+      <table class="w-full border border-gray-300 divide-y divide-gray-300 rounded-lg overflow-hidden table-fixed">
         <thead class="bg-gradient-to-r from-indigo-400 to-purple-500 text-white">
           <tr>
-            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wide">Item Name</th>
-            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wide">Price (₹)</th>
-            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wide">Quantity</th>
-            <th class="px-6 py-4 text-left text-sm font-semibold uppercase tracking-wide">Total (₹)</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900">Item Name</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900">Price (₹)</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900">Quantity</th>
+            <th class="px-4 py-3 text-left text-xs md:text-sm font-semibold text-gray-900">Total (₹)</th>
           </tr>
         </thead>
         <tbody id="tableBody" class="divide-y divide-gray-200 bg-white">
-
         </tbody>
       </table>
     </div>
 
     <div class="flex justify-between items-center border-t border-gray-300 pt-4 mt-4">
-      <span class="text-lg md:text-xl font-medium text-gray-800">Total Amount Due:</span>
-      <span id="grandTotal" class="text-2xl md:text-3xl font-extrabold text-indigo-700">₹0.00</span>
+      <span class="text-base md:text-lg font-medium text-gray-800">Grand Total:</span>
+      <span id="grandTotal" class="text-xl md:text-2xl font-extrabold text-indigo-700">₹0.00</span>
     </div>
 
     <button
@@ -46,7 +45,8 @@
       Thank You for Visiting Us!
     </button>
   </div>
-  
+
+
   <script>
     // Retrieve stored data from localStorage
     const tableBody = document.querySelector("#tableBody");
