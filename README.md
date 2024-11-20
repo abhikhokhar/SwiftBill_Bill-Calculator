@@ -15,7 +15,9 @@ How to Use:
 Navigate to the Billing Form section.
 Enter the item name, price, and quantity.
 Click the Add Item button to add the item to your basket.
-Screenshot: Add Item Form
+
+![image](https://github.com/user-attachments/assets/694efb68-b2fd-4628-b31d-08fad8c94a86)
+
 
 2. Calculating the Total
 After adding the items, click on the Calculate Bill button to display the grand total of the items in your basket.
